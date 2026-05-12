@@ -1,0 +1,23 @@
+{
+  "name": "Saft NutriCalc",
+  "short_name": "NutriCalc",
+  "description": "Nutritional calculator with allergen tracking",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F4F9F6",
+  "theme_color": "#FF8C42",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

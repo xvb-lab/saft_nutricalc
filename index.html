@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saft NutriCalc</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.svg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FF8C42">
+<style>
+  body { margin:0; background:#0E1B14; color:#D4EEE0; font-family:sans-serif;
+         display:flex; align-items:center; justify-content:center; height:100vh; }
+  .spinner { width:36px; height:36px; border:3px solid #2A4235;
+             border-top-color:#4CAF82; border-radius:50%;
+             animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="spinner"></div>
+<script>
+  // Detect mobile by viewport width AND user agent (covers both narrow desktop windows and tablets in landscape)
+  const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isNarrow = window.innerWidth < 900;
+  const target = (isMobileUA || isNarrow) ? 'mobile.html' : 'desktop.html';
+  // preserve any query string / hash
+  window.location.replace(target + window.location.search + window.location.hash);
+</script>
+</body>
+</html>
